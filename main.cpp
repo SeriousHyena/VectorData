@@ -17,10 +17,22 @@ SENTINAL-CONTROLLED REPETION AND VECTOR ARRAYS
 
 using namespace std;
 
-vector<int> myVector;	//create a vector array object with no size initialization
+
 
 int main()
+
 {
+	vector<int> myVector;	//create a vector array object with no size initialization
+	int keybdIn = 0;
+
+	while (keybdIn >= 0)	//get input as long as non-negative number is entered
+	{
+		cout << "Please enter any non-negative integer (enter a negative integer to quit): " << endl;
+		cin >> keybdIn;
+		cout << keybdIn;
+	}
+
+
 
 	return 0;
 }
