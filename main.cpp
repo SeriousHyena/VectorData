@@ -30,6 +30,7 @@ int main()
 		<< "negative integer to quit! " ;
 		cin >> input;
 
+
 		while (input >= 0)
 		{
 			myIntVector.push_back(input);
@@ -43,6 +44,10 @@ int main()
 		{
 			cout << num * 2 << endl;
 		}
+
+		cout << endl<<endl;
+		cout << myIntVector.operator[](3);	//access a specific element in the vector
+
 
 	return 0;
 }
