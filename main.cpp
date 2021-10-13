@@ -1,4 +1,5 @@
 /*
+File name: VectorData
 
 SENTINAL-CONTROLLED REPETION AND VECTOR ARRAYS
 -> get keyboard input non-negative integers from 0 and greater
@@ -20,19 +21,28 @@ using namespace std;
 
 
 int main()
-
 {
-	vector<int> myVector;	//create a vector array object with no size initialization
-	int keybdIn = 0;
+	vector<int> myIntVector;
+	int input;
 
-	while (keybdIn >= 0)	//get input as long as non-negative number is entered
-	{
-		cout << "Please enter any non-negative integer (enter a negative integer to quit): " << endl;
-		cin >> keybdIn;
-		cout << keybdIn;
+	//priming read loads the while loop for the first time it tests the condition
+	cout << "Enter a positive integer to add to the vector or "
+		<< "negative integer to quit! " ;
+		cin >> input;
+
+		while (input >= 0)
+		{
+			myIntVector.push_back(input);
+			cout << "Enter a positive integer to add to the vector or "
+				<< "negative integer to quit! ";
+			cin >> input;
 	}
+		cout << "Here are the amounts doubled: " << endl;
 
-
+		for (int num : myIntVector)
+		{
+			cout << num * 2 << endl;
+		}
 
 	return 0;
 }
